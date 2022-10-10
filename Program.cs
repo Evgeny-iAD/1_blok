@@ -12,6 +12,12 @@ string [] FindStringArray(string [] array)
 
 string PrintText(string [] array)
 {
-
-  return "-1";
+  string result = String.Empty;
+  if(array == null){return result;}
+  for (int i=0; i<array.Length; i++)
+  {
+    if(i == array.Length-1) {result= result + $"{array[i]}";}
+    else {result= result + $"{array[i]}"+ ", ";}
+  }
+  return result;
 }
